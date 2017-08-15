@@ -35,8 +35,8 @@ html, body{
   text-align: center;
 }
 md-spinner{
-  width: 50px !important;
-  height: 50px !important;
+  width: 35px !important;
+  height: 35px !important;
   position: absolute;
   top: 0;
   left: 0;
