@@ -1,13 +1,17 @@
 .home-feed-list md-list-item{
     cursor: pointer;
-    padding: 10px 0;
+    padding: 10px 0 ;
 }
+.home-feed-list md-list-item .mat-list-text{
+    padding: 0 !important;
+}
+
 .home-feed-list md-list-item:hover{
     background: #ebeaea;
 }
 .home-feed-list md-list-item h4{
-    font-size: 14px;
-    overflow: visible;
+    font-size: 12px;
+    height: 52px;
     white-space: normal;
     margin-bottom: 10px;
 }
