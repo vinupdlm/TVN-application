@@ -1,0 +1,58 @@
+<md-sidenav-container>
+<md-toolbar color="primary">
+  <!--<button md-icon-button *ngIf="router.url == '/home'" (click)="sidenav.open()"><md-icon>menu</md-icon></button>
+  <button md-icon-button *ngIf="router.url != '/home'" (click)="goToBack()"><md-icon>arrow_back</md-icon></button>-->
+  <button md-icon-button *ngIf="!router.url.includes('story')" (click)="sidenav.open()"><md-icon>menu</md-icon></button>
+  <button md-icon-button *ngIf="router.url.includes('story')" (click)="goToBack()"><md-icon>arrow_back</md-icon></button>
+  <span>True Vision News</span>
+  <span class="spacer txt-center"></span>
+  <span class="location-text">{{title | async}}</span>
+  <button md-icon-button><md-icon>location_on</md-icon></button>
+</md-toolbar>
+
+{{routeType | async}}
+  <md-sidenav #sidenav>
+    <md-list class="location-list" (click)="sidenav.close()">
+      <md-list-item routerLink="/home">
+        <md-icon md-list-icon>home</md-icon>
+        <h4 md-line>Top Stories</h4>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item routerLink="/vadakara" (click)="sidenav.close()">
+        <md-icon md-list-icon>location_on</md-icon>
+        <h4 md-line>Vadakara</h4>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item routerLink="/nadapuram">
+        <md-icon md-list-icon>location_on</md-icon>
+        <h4 md-line>Nadapuram</h4>
+      </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+  </md-sidenav>
+
+  <!--<div class="example-sidenav-content">
+    <button type="button" md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div>-->
+
+<!--{{router.url}}-->
+<router-outlet></router-outlet>
+</md-sidenav-container>
+
+
+<!--<div style="padding: 7px">
+  <button md-fab color="primary">
+      <md-icon>check circle</md-icon>
+    </button>
+    
+    <p>
+      <button md-button md-raised-button>Basic Button</button>
+      <button md-button>Basic Button</button>
+  
+      <md-slide-toggle color="primary">Slide Toggle</md-slide-toggle>
+    </p>
+    
+  
+  </div>-->

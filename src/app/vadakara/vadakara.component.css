@@ -1,0 +1,22 @@
+.home-feed-list md-list-item{
+    cursor: pointer;
+    padding: 10px 0;
+}
+.home-feed-list md-list-item:hover{
+    background: #ebeaea;
+}
+.home-feed-list md-list-item h4{
+    font-size: 14px;
+    overflow: visible;
+    white-space: normal;
+    margin-bottom: 10px;
+}
+.home-feed-list md-list-item p{
+    font-size: 12px;
+    text-align: right;
+}
+.list-avatar{
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 15px;
+}    

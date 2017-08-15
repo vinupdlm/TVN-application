@@ -1,0 +1,8 @@
+
+<div *ngIf="showLoader" class="service-preloader">
+    <md-spinner color="primary"></md-spinner>
+</div>
+
+<div *ngIf="story" class="content-wrap">
+    <div [innerHtml]="story.content.rendered"></div>
+</div>

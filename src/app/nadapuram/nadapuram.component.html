@@ -1,0 +1,15 @@
+<div *ngIf="showLoader" class="service-preloader">
+    <md-spinner color="primary"></md-spinner>
+</div>
+
+<md-list class="home-feed-list">
+  <div *ngFor="let item of homefeed">
+  <md-list-item [routerLink]="['story',item.id]">
+  <img md-list-avatar src="./images/girl.jpg" alt="" class="list-avatar">
+  <h4 md-line>{{item.title.rendered}}</h4>
+    <p md-line> Publishesd on: {{item.date | date}}</p>
+  </md-list-item>
+  <md-divider></md-divider>
+  </div>
+  
+</md-list>

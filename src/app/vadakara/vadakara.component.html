@@ -1,0 +1,65 @@
+<!--<md-toolbar color="primary">
+  Angular Material 2 App
+</md-toolbar>
+
+<div style="padding: 7px">
+  
+  <p>
+    <button md-button>Basic Button</button>
+
+    <md-slide-toggle>Slide Toggle</md-slide-toggle>
+  </p>
+  
+
+</div>-->
+
+<!--<div>
+  <md-toolbar color="primary">
+    <span><md-icon>mood</md-icon></span>
+
+    <span>Yay, Material in Angular 2!</span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Option 1</button>
+    <button md-menu-item>Option 2</button>
+  </md-menu>
+
+  <md-card>
+    <button md-button>All</button>
+    <button md-raised-button>Of</button>
+    <button md-raised-button color="primary">The</button>
+    <button md-raised-button color="accent">Buttons</button>
+  </md-card>
+
+  <span class="done">
+    <button md-fab>
+      <md-icon>check circle</md-icon>
+    </button>
+  </span>
+</div>-->
+
+<!--<h1>True Vision Top Stories</h1>
+<button md-raised-button color="primary" routerLink="/Story">Go to Story Page 1</button>-->
+
+<!--{{homefeed | json}}-->
+
+<div *ngIf="showLoader" class="service-preloader">
+    <md-spinner color="primary"></md-spinner>
+</div>
+
+
+<md-list class="home-feed-list">
+  <div *ngFor="let item of homefeed">
+  <md-list-item [routerLink]="['story', item.id]">
+  <img md-list-avatar src="./images/girl.jpg" alt="" class="list-avatar">
+  <h4 md-line>{{item.title.rendered}}</h4>
+    <p md-line> Publishesd on: {{item.date | date}}</p>
+  </md-list-item>
+  <md-divider></md-divider>
+  </div>
+  
+</md-list>

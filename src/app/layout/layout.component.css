@@ -1,0 +1,23 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.txt-center{
+    text-align: center;
+}
+md-sidenav-container{
+  width: 100%;
+  height: 100%;
+}
+md-sidenav{
+  width: 80%;
+  max-width: 350px;
+}
+.location-text{
+  font-size: 15px;
+}
+.location-list md-list-item{
+  cursor: pointer;
+}
+.location-list md-list-item:hover{
+  background: #ebeaea;
+}
